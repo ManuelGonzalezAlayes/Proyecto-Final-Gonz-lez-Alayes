@@ -1,3 +1,25 @@
+fetch("./alumnos.json")
+.then(res => res.json())
+.then(alumnos => {
+    let ejemplo = document.getElementById("ejemplos")
+    alumnos.forEach( function (alumno) {
+        let li = document.createElement ("li")
+            let promedio = calcularPromedio (alumno.nota1,alumno.nota2)
+            console.log (promedio)
+            if(promedio>=7){
+                li.textContent = `${alumno.nombre} ${alumno.apellido} obtuvo en su primer parcial ${alumno.nota1}, y en su segundo parcial ${alumno.nota2}. Por lo tanto, tiene un promedio de ${alumno.promedio} , es decir, ha promocionado la asignatura y no debe rendir final.`
+            }
+            else if(promedio >=4 && promedio<7){
+                li.textContent = `${alumno.nombre} ${alumno.apellido} obtuvo en su primer parcial ${alumno.nota1}, y en su segundo parcial ${alumno.nota2}. Por lo tanto, tiene un promedio de ${alumno.promedio} , es decir, ha aprobado la asignatura pero aún debe rendir final.`
+            }
+            else if(promedio<4){
+                li.textContent = `${alumno.nombre} ${alumno.apellido} obtuvo en su primer parcial ${alumno.nota1}, y en su segundo parcial ${alumno.nota2}. Por lo tanto, tiene un promedio de ${alumno.promedio} , es decir, ha desaprobado la asignatura y debe recursar.`
+            }
+            ejemplo.appendChild(li)
+    })
+})
+
+
 mostrarListado()
 function agregarAlumno (){
     let nombre = document.getElementById("nombre").value
@@ -53,5 +75,3 @@ function mostrarListado (){
 function calcularPromedio (nota1 , nota2){
     return (Number(nota1)+Number(nota2)) /2
 }
-
-//[Manuel González Alayes] obtuvo un promedio de [7]. Por lo tanto, [ha promocionado la asignatura y no deben rendir final.]

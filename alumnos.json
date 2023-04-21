@@ -1,0 +1,23 @@
+[
+{
+    "nombre": "Alejandro",
+    "apellido": "Wilcke",
+    "nota1": 10,
+    "nota2": 10,
+    "promedio": 10
+},
+{
+    "nombre": "Luciano",
+    "apellido": "Barreda",
+    "nota1": 3,
+    "nota2": 5,
+    "promedio": 6.75
+},
+{
+    "nombre": "Aníbal",
+    "apellido": "Dasso",
+    "nota1": 2,
+    "nota2": 2,
+    "promedio": 2
+}
+]

@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Aplicativo Universitario</title>
 </head>
 <body>
     <h1>Aplicativo Universitario</h1>
+        <p>Este aplicativo permite determinar el promedio obtenido de las notas del primer y segundo parcial, y a partir de él, indicarle al alumno si ha aprobado y debe rendir final; si ha promocionado y no debe rendir final; o si ha desaprobado y debe recursar.</p>
+    <h2>Ejemplos:</h2>
+        <ul id="ejemplos">
+            
+        </ul>
+    <h3>Instructivos de uso</h3>
+        <p>Ingresar inicialmente su nombre y apellido, luego su nota de primer parcial, seguida de su nota de segundo parcial. A continuación seleccioné el botón "Calcular".</p>
     <input type="text" placeholder="Nombre y Apellido" id="nombre">
-    <input type="number" placeholder="Nota del Primer Parcial " id="nota1">
-    <input type="number" placeholder="Nota del Segundo Parcial " id="nota2">
-    <button onclick="agregarAlumno()">Agregar</button>    
+    <input type="number" placeholder="Nota del 1er Parcial " id="nota1">
+    <input type="number" placeholder="Nota del 2do Parcial " id="nota2">
+    <button onclick="agregarAlumno()">Calcular</button>    
     <ul id="listado">
 
     </ul>
     <script src="main.js"></script>
 </body>
-</html>
+</html> 
